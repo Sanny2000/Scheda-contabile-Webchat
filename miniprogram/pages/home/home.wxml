@@ -1,0 +1,74 @@
+<!-- 头部 -->
+<view class="header">
+	<!-- 上 结余-->
+	<view class="header-top">
+		<view class="top-title">本月结余</view>
+		<view class="top-total">{{surplus.num}}<text>{{surplus.decimal}}</text></view>
+	</view>
+
+	<!-- 下 收入支出 -->
+	<view class="header-bottom clearfix">
+		<view class="bottom-item fl">
+			<view class="item-title">本月支出</view>
+			<view class="item-total">{{monCost.zhichu}}</view>
+		</view>
+		<view class="line"></view>
+		<view class="bottom-item fl">
+			<view class="item-title">本月收入</view>
+			<view class="item-total">{{monCost.shouru}}</view>
+		</view>
+
+	</view>
+</view>
+
+<!-- 内容区 -->
+<view class="content">
+	<!-- 上 时间标题 -->
+	<view class="content-title">
+		<!-- 左边 信息 -->
+		<view class="title-info">
+			<text>{{currentDate}}</text>
+			<text wx:if="{{isToday}}">今天</text>
+			<text>收入: {{dayCost.shouru}}</text>
+			<text>支出: {{dayCost.zhichu}}</text>
+		</view>
+
+		<!-- 右边 三个点 -->
+		<picker mode="date" bindchange="setDate">
+			<view class="picker">
+				<view class="title-more">
+					<text></text>
+					<text></text>
+					<text></text>
+				</view>
+			</view>
+		</picker>
+
+	</view>
+
+
+	<!-- 下列表 -->
+  <view class="msg-list" wx:for="{{dayMsgData}}" wx:key="index">
+    <!-- 左边图标 -->
+    <view class="msg-icon">
+      <image src="{{item.iconUrl}}"></image>
+    </view>
+
+    <!-- 右边信息 -->
+    <view class="msg-box">
+      <!-- 左边标题备注 -->
+      <view class="msg">
+        <view class="msg-title">{{item.iconTitle}}</view>
+        <view class="msg-text">{{item.comment}}</view>
+      </view>
+
+      <!-- 右边金额 -->
+      <view class="msg-money {{item.costType =='zhichu' ? 'reduce' : 'add'}}">{{item.costType == 'zhichu' ? '-'  : '+'}}￥{{item.money}}</view>
+    
+    </view>
+  
+  </view>
+
+
+
+</view>

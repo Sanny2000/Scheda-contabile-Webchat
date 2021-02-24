@@ -1,0 +1,129 @@
+.header{
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: #FFDC5C;
+  height: 314rpx;
+  padding: 40rpx;
+  box-sizing: border-box;
+ }
+ .header-top .top-title{
+   font-size: 28rpx;
+   color: #C49F2C;
+ }
+ .header-top .top-total{
+   padding-top: 10rpx;
+   font-size: 50rpx;
+   font-weight: bold;
+ }
+ .header-top .top-total text{
+   font-size: 40rpx;
+ }
+ .header-bottom{
+   position: relative;
+   margin-top: 20rpx;
+ }
+ .bottom-item{
+   width: 50%;
+   text-align: center;
+ }
+ .bottom-item .item-title{
+   color: #C49F2C;
+ }
+ .bottom-item .item-total{
+   font-weight: bold;
+   font-size: 36rpx;
+   padding-top: 10rpx;
+ }
+ /* 线条 */
+ .line{
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   margin: auto;
+   height: 50%;
+   width: 1px;
+   background-color: #C7A027;
+ }
+ /* 内容区 */
+ .content{
+   padding: 0 20rpx 30rpx;
+ }
+ .content-title{
+   position: sticky;
+   top: 314rpx;
+   left: 0;
+   height: 42rpx;
+   display: flex;
+   justify-content: space-between;
+   padding: 20rpx 0;
+   background-color: #fff;
+ }
+ .title-info text{
+   font-size: 28rpx;
+   color: #8D8D8D;
+   margin-right: 10rpx;
+ }
+ /* 三个点 */
+ .picker{
+   height: 42rpx;
+ }
+ .title-more{
+   height: 100%;
+   display: flex;
+   align-items: center;
+ }
+ .title-more text{
+   width: 8rpx;
+   height: 8rpx;
+   background-color: #8D8D8D;
+   border-radius: 50%;
+   margin: 0 5rpx;
+ }
+ /* 列表 */
+ .msg-list{
+   display: flex;
+   align-items: center;
+   height: 102rpx;
+   margin-bottom: 20rpx;
+ }
+ .msg-icon{
+   width: 80rpx;
+   height: 80rpx;
+   margin-right: 20rpx;
+ }
+ .msg-icon image{
+   width: 100%;
+   height: 100%;
+ }
+ .msg-box{
+   width: calc(100% - 100rpx);
+   display: flex;
+   justify-content: space-between;
+   border-bottom: 1px solid #E8E8E8;
+ }
+ .msg-title{
+   font-weight: bold;
+   padding-bottom: 10rpx;
+ 
+ }
+ .msg-text{
+   font-size: 28rpx;
+   color: #A0A0A0;
+   padding-bottom: 10rpx;
+ }
+ .msg-money{
+   height: 100%;
+   line-height: 90rpx;
+   font-weight: bold;
+ }
+ /* 收入类 */
+ .add{
+   color: #CF847F;
+ }
+ /* 支出类 */
+ .reduce{
+   color: #169F73;
+ }

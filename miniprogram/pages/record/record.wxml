@@ -1,0 +1,74 @@
+<!-- 头部 -->
+<view class="header"></view>
+
+<!-- 内容区 -->
+<view class="content">
+  <!-- 记账类型图标 -->
+  <view class="book-types">
+    <!-- 标题 -->
+    <view class="types-title">
+      <view class="title-item {{item.isAct ? 'active' : ''}}" wx:for="{{bookTitle}}" wx:key="index" bindtap="titleSelect" data-index="{{index}}" data-name="bookTitle">{{item.title}}</view>
+     
+    </view>
+    <!-- 轮播 -->
+    <view class="swiper-type">
+      <swiper class="swiper" indicator-dots="true" indicator-color="#bababa" indicator-active-color="#FFDC5C">
+        <swiper-item class="swiper-item" wx:for="{{bannerArr}}" wx:key="index">
+          <!-- 单个图标 -->
+          <view class="swiper-icon {{iconItem.isAct ? 'active' : ''}}" wx:for="{{item}}" wx:for-item="iconItem" wx:for-index="id" wx:key="id" bindtap="bannerSelect" data-index = "{{index}}" data-id = "{{id}}">
+            <view class="icon-img">
+              <image src="{{iconItem.icon_url}}"></image>
+            </view>
+            <view class="icon-text">{{iconItem.title}}</view>
+          </view>
+        </swiper-item>  
+      </swiper>
+    
+    </view>
+  </view>
+
+  <!-- 账户选择 -->
+  <view class="accout-box">
+    <!-- 上 标题 -->
+    <view class="accout-title">
+      <text class="iconfont icon-qianbao"></text>
+      账户选择
+    </view>
+    <!-- 下 选择 -->
+    <view class="account-type">
+      <text class="account-item {{item.isAct ? 'active' : ''}}" wx:for = "{{accountType}}" wx:key="index" bindtap = "titleSelect" data-index = "{{index}}" data-name="accountType">{{item.title}}</text>
+
+    
+    </view>
+  
+  </view>
+
+  <!-- 记账信息 -->
+  <view class="info-box">
+  <!-- 时间 -->
+  <picker mode="date" end="{{today}}" bindchange="getInfoData" data-type="date">
+    <view class="info-item">
+    <view class="info-title">日期</view>
+    <view class="info-time">{{info.date}}</view>
+    </view>
+  </picker>
+  <!-- 金额 -->
+  <view class="info-item">
+    <view class="info-title">金额</view>
+    <view class="info-inp">
+      <input type ="digit" placeholder="请输入记账金额" bindchange="getInfoData" value="{{info.money}}" data-type="money"></input>
+    </view> 
+  </view>
+  <!-- 备注 -->
+  <view class="info-item">
+  <view class="info-title">备注</view>
+  <view class="info-inp">
+    <input type ="text" placeholder="请输入备注内容" bindchange="getInfoData" value="{{info.comment}}" data-type="comment"></input>
+  </view>
+  </view>
+  </view>
+
+</view>
+<view class="save-box" bindtap="addMsgData">保存</view>
+
+

@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/record/record",
+    "pages/chart/chart",
+    "pages/user/user"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#FFDC5C",
+    "navigationBarTitleText": "呀呀记账",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar":{
+    "list":[
+      {
+        "pagePath":"pages/home/home",
+        "text": "首页",
+        "iconPath": "./images/home.png",
+        "selectedIconPath": "./images/home@act.png"
+      },
+      {
+        "pagePath":"pages/record/record",
+        "text":"记账",
+        "iconPath":"./images/record.png",
+        "selectedIconPath":"./images/record@act.png"
+      },
+      {
+        "pagePath":"pages/chart/chart",
+        "text":"图表",
+        "iconPath":"./images/chart.png",
+        "selectedIconPath":"./images/chart@act.png"
+      },
+      {
+        "pagePath":"pages/user/user",
+        "text":"我的",
+        "iconPath":"./images/user.png",
+        "selectedIconPath":"./images/user@act.png"
+      }
+    ],
+    "color":"#bfbfbf",
+    "selectedColor":"#FFDC5C"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

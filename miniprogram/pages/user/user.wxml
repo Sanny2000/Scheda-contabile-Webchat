@@ -1,0 +1,11 @@
+<view class="user">
+  <!-- 头像 -->
+  <view class="userImg">
+    <image wx:if="{{isAuth}}" src="{{userInfo.avatarUrl}}"></image>
+    <button wx:else class="btn" open-type="getUserInfo" bindgetuserinfo="getUserInfo">获取头像</button>
+  </view>
+
+  <!-- 用户名 -->
+  <view class="userName">{{userInfo.nickName}}</view>
+  </view>
+

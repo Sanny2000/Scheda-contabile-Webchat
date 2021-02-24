@@ -1,0 +1,32 @@
+/* miniprogram/pages/user/user.wxss */
+.user{
+  background-color: #FFDC5C;
+  padding: 40rpx 0;
+  height: 280rpx ;
+}
+.userImg{
+  width: 200rpx;
+  height: 200rpx;
+  background-color: #fff;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+.userImg image{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.userImg .btn{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 200rpx;
+  padding: 0;
+}
+.userName{
+  text-align: center;
+  font-weight: bold;
+  font-size: 40rpx;
+  padding-top: 30rpx;
+}
